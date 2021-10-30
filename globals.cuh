@@ -5,7 +5,7 @@ enum ALG_TYPE {
 };
 typedef uint SIZE_TYPE;
 //typedef unsigned long long EDGE_POINTER_TYPE;
-typedef uint EDGE_POINTER_TYPE;
+typedef ull EDGE_POINTER_TYPE;
 
 struct EdgeWithWeight {
     uint toNode;

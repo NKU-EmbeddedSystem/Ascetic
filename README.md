@@ -13,7 +13,7 @@ Ascetic accepts the binary CSR format just like :
 0 4 7 9
 1 2 3 4 2 3 4 3 4 5 6
 ```
-We will submit an elegant tool which could transfer txt format to CSR format soon.
+There is an elegant tool which could transfer txt format to CSR format in the "converter" directory. But maybe you need to read it and fix it according to your need.
 
 #### Running
 ```

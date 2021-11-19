@@ -17,7 +17,7 @@ We will submit an elegant tool which could transfer txt format to CSR format soo
 
 #### Running
 ```
-$ ./ptgraph --input /dataset/somedata --algo bfs --sourceNode 0
+$ ./ptgraph --input /dataset/somedata --algo bfs --source 0
 ```
 
 #### Publication

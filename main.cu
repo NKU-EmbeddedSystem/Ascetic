@@ -1,5 +1,4 @@
 #include "CalculateOpt.cuh"
-#include "main.cuh"
 #include "constants.cuh"
 #include "ArgumentParser.cuh"
 int main(int argc, char** argv) {

@@ -189,7 +189,7 @@ void bfs_opt(string path, uint sourceNode, double adviseRate) {
                                             thrust::plus<uint>());
             nodeSum += activeNodesNum;
             preProcess.endRecord();
-            cout << "iter " << iter << " activeNodesNum " << activeNodesNum << endl;
+            //cout << "iter " << iter << " activeNodesNum " << activeNodesNum << endl;
             //break;
 
         }
@@ -531,7 +531,7 @@ void sssp_opt(string path, uint sourceNode, double adviseRate) {
                                             0,
                                             thrust::plus<uint>());
             nodeSum += activeNodesNum;
-            cout << "iter " << iter << " activeNodesNum " << activeNodesNum << endl;
+            //cout << "iter " << iter << " activeNodesNum " << activeNodesNum << endl;
 
         }
         totalProcess.endRecord();
@@ -586,9 +586,8 @@ void pr_opt(string path, double adviseRate) {
         cout << "totalSum " << totalSum << endl;
         totalProcess.startRecord();
         gpuErrorcheck(cudaPeekAtLastError());
-        cout << "iter " << iter << " activeNodesNum " << activeNodesNum << endl;
-        while (activeNodesNum > 3) {
-            break;
+        //cout << "iter " << iter << " activeNodesNum " << activeNodesNum << endl;
+        while (activeNodesNum) {
             iter++;
             preProcess.startRecord();
             setStaticAndOverloadLabelBool<<<graph.grid, graph.block>>>(graph.vertexArrSize, graph.isActiveD,
@@ -704,7 +703,7 @@ void pr_opt(string path, double adviseRate) {
                                             thrust::plus<uint>());
             nodeSum += activeNodesNum;
             preProcess.endRecord();
-            cout << "iter " << iter << " activeNodesNum " << activeNodesNum << endl;
+            //cout << "iter " << iter << " activeNodesNum " << activeNodesNum << endl;
 
         }
 

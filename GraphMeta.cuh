@@ -153,7 +153,7 @@ void GraphMeta<EdgeType>::readDataFromFile(const string &fileName, bool isPagera
     cout << "readDataFromFile" << endl;
     auto startTime = chrono::steady_clock::now();
     ifstream infile(fileName, ios::in | ios::binary);
-    infile.read((char *) &this->vertexArrSize, sizeof(uint));
+    infile.read((char *) &this->vertexArrSize, sizeof(EDGE_POINTER_TYPE));
     infile.read((char *) &this->edgeArrSize, sizeof(EDGE_POINTER_TYPE));
     cout << "vertex num: " << this->vertexArrSize << " edge num: " << this->edgeArrSize << endl;
     if (isPagerank) {
